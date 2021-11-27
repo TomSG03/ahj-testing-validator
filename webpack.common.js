@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const LiveReloadPlugin = require('webpack-livereload-plugin');
 
 module.exports = {
   target: 'web',
@@ -47,6 +48,9 @@ module.exports = {
     ],
   },
   plugins: [
+    new LiveReloadPlugin({
+      children: true
+    }),
     new CleanWebpackPlugin(),
     new HtmlWebPackPlugin({
       template: './src/index.html',
