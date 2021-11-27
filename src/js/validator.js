@@ -27,13 +27,7 @@ export default class Validator {
     this.gui.showMessage('');
     this.card.cardNum = this.input.value;
     if (this.card.luhnAlgorithm()) {
-      let searchPay = '';
-      if (this.card.cardNum[0] === '2' || this.card.cardNum[0] === '4') {
-        searchPay = this.card.cardNum.substring(0, 1);
-      } else {
-        searchPay = this.card.cardNum.substring(0, 2);
-      }
-      const systemPay = this.card.getPay(searchPay);
+      const systemPay = this.card.getPaySystem();
       if (systemPay !== -1) {
         this.gui.showCard(systemPay);
       } else {
