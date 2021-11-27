@@ -1,6 +1,7 @@
 export default class Interface {
   constructor(block) {
     this.cards = block.getElementsByClassName('card');
+    this.message = block.querySelector('[data-message=error]');
   }
 
   showCard(code) {
@@ -17,5 +18,9 @@ export default class Interface {
         [...this.cards][index].classList.add('gray');
       }
     }
+  }
+
+  showMessage(mess) {
+    this.message.innerHTML = mess;
   }
 }
