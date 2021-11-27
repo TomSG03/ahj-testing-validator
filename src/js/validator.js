@@ -5,7 +5,7 @@ export default class Validator {
   constructor(block) {
     this.block = block;
     this.input = this.block.querySelector('input');
-    this.button = this.block.querySelector('[data-button=valid]');
+    this.button = this.block.querySelector('.input-box .checkButton');
     this.card = new Card();
     this.gui = new Interface(block);
   }

@@ -35,7 +35,7 @@ body {
   
 }
 
-.gray {
+.invalid {
   filter: contrast(100%) brightness(30%);
 }
 
@@ -57,7 +57,7 @@ body {
   font-size: 20px;
 }
 
-.nameButton {
+.checkButton {
   padding: 9px 16px;
 
   border: solid 1px #cecece;
