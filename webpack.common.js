@@ -28,7 +28,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(?:jpg|jpeg|png|gif|ico)$/,
+        test: /\.(jpg|jpeg|png|gif|ico)$/,
         type: 'asset/resource',
       },
       {
@@ -40,10 +40,6 @@ module.exports = {
       {
         test: /\.svg$/,
         type: 'asset/resource',
-      },
-      {
-        test: /\.txt$/,
-        type: 'asset/source'
       },
     ],
   },
